@@ -1,0 +1,50 @@
+<html ng-app="registerModule">
+<head>
+<script src="angular.min.js"></script>
+<script src="angular-route.js"></script>
+<script src="Registerformjs.js"></script>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="Registrationstyle.css">
+</head>
+<body ng-controller="studentregisterform">
+	<div id="registration">
+		<h2>Create an Account</h2>
+
+
+		<form id="RegisterUserForm" action="" method="post">
+			<fieldset>
+				<p>
+					<label for="name">User Name</label> <input id="name" name="name"
+						type="text" class="text" value="" ng-model="User.username" />
+				</p>
+				
+				<p>
+					<label for="password">Password</label> <input id="password"
+						name="password" class="text" type="password"  ng-model="User.password"/>
+				</p>
+
+				<p>
+					<label for="tel">Status</label> <input id="tel" name="tel"
+						type="tel" class="text" value="" ng-model="User.enabled" />
+				</p>
+
+
+				<p>
+					<input id="acceptTerms" name="acceptTerms" type="checkbox" /> <label
+						for="acceptTerms"> I agree to the <a href="">Terms and
+							Conditions</a> and <a href="">Privacy Policy</a>
+					</label>
+				</p>
+
+				<p>
+					<button type="submit" ng-click="register()">Register</button>
+				</p>
+			</fieldset>
+
+		</form>
+	</div>
+</body>
+
+</html>
